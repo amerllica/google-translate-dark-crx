@@ -19,8 +19,19 @@ const makeDark = (): void => {
       html svg {
         filter: invert(100%) brightness(1) hue-rotate(-180deg);
       }
+      html [style*="background-image:"] {
+        filter: invert(100%) brightness(1) hue-rotate(-180deg);
+      }
     `
     document.head.appendChild(style)
+
+    document.querySelectorAll('*').forEach((tag: any) => {
+      const tagBgI = window.getComputedStyle(tag).backgroundImage;
+
+      if(tagBgI && tagBgI !== 'none') {
+        tag.style.filter = 'invert(100%) brightness(1) hue-rotate(-180deg)';
+      }
+    })
   }
 };
 
