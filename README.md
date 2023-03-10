@@ -23,7 +23,7 @@ $ npm run dev
 1. set your Chrome browser 'Developer mode' up
 2. click 'Load unpacked', and select `gt-dark/build` folder
 
-### Nomal FrontEnd Developer Mode
+### Normal FrontEnd Developer Mode
 
 1. access `http://localhost:3000/`
 2. when debugging popup page, open `/popup.html`
